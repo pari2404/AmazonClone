@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <div class="navbar">
+
+            <!-- LOGO -->
+
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+
+            <!-- LOCATION -->
+
+            <div class="nav-loc border">
+
+                <p>Deliver to</p>
+
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>India</p>
+                </div>
+
+            </div>
+
+            <!-- SEARCH -->
+
+            <div class="nav-search">
+
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+
+                <input type="text"
+                    placeholder="Search Amazon"
+                    class="search-input">
+
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </div>
+
+            <!-- LANGUAGE -->
+
+            <div class="lang border">
+
+                <div class="lang_icon">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+
+                <div class="lang_en">
+                    <p>EN</p>
+                </div>
+
+            </div>
+
+            <!-- SIGN IN -->
+
+            <div class="sign border" onclick="openPopup()">
+
+                <p class="first">Hello, Sign in</p>
+                <p class="second">Accounts & Lists</p>
+
+            </div>
+
+            <!-- ORDERS -->
+
+            <div class="order border">
+
+                <p class="first">Returns</p>
+                <p class="second">& Orders</p>
+
+            </div>
+
+            <!-- CART -->
+
+            <div class="cart border">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+
+            </div>
+
+        </div>
+
+        <!-- PANEL -->
+
+        <div class="panel">
+
+            <div class="all">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+
+            <div class="shop">
+                <p>Today's Deals</p>
+                <p>Registry</p>
+                <p>Customer Service</p>
+                <p>Gift Cards</p>
+                <p>Sell</p>
+            </div>
+
+            <div class="deal">
+                <p>Shop deals in electronics</p>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- HERO SECTION -->
+
+    <div class="hero">
+
+        <div class="text">
+
+            <p>
+                You are on amazon.com. You can also shop on Amazon India
+                for millions of products with fast local delivery.
+                <a href="#">Click here to go to amazon.in</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- CATEGORY SECTION -->
+
+    <div class="category-section">
+
+        <h1 class="main-heading">Fashion Store</h1>
+
+        <div class="category-container">
+
+            <!-- DRESS CATEGORY -->
+
+            <div class="category-card">
+
+                <img src="dress-main.jpg" alt="Dress">
+
+                <h2>Dresses</h2>
+
+                <button onclick="toggleProducts()">
+                    View Collection
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUCTS -->
+
+    <div class="products" id="dressProducts">
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <img src="dress1.jpg" alt="Red Dress">
+
+            <h3>Red Dress</h3>
+
+            <p>₹1499</p>
+
+            <button onclick="addToCart('Red Dress',1499)">
+                Add to Cart
+            </button>
+
+        </div>
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <img src="dress2.jpg" alt="Black Dress">
+
+            <h3>Black Dress</h3>
+
+            <p>₹1999</p>
+
+            <button onclick="addToCart('Black Dress',1999)">
+                Add to Cart
+            </button>
+
+        </div>
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <img src="dress3.jpg" alt="White Dress">
+
+            <h3>White Dress</h3>
+
+            <p>₹1299</p>
+
+            <button onclick="addToCart('White Dress',1299)">
+                Add to Cart
+            </button>
+
+        </div>
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <img src="dress4.jpg" alt="Pink Dress">
+
+            <h3>Pink Dress</h3>
+
+            <p>₹1799</p>
+
+            <button onclick="addToCart('Pink Dress',1799)">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- SHOPPING SECTION -->
+
+    <div class="shopping">
+
+        <div class="b1 box">
+
+            <div class="box_cont">
+
+                <h2>Level up your beauty routine</h2>
+
+                <div class="box_img"
+                    style="background-image: url('b1.jpg');">
+                </div>
+
+                <p>See more</p>
+
+            </div>
+
+        </div>
+
+        <div class="b2 box">
+
+            <div class="box_cont">
+
+                <h2>Fantastic Finds for Home</h2>
+
+                <div class="box_img"
+                    style="background-image: url('b2.jpeg');">
+                </div>
+
+                <p>See more</p>
+
+            </div>
+
+        </div>
+
+        <div class="b3 box">
+
+            <div class="box_cont">
+
+                <h2>Gaming accessories</h2>
+
+                <div class="box_img"
+                    style="background-image: url('b3.jpg');">
+                </div>
+
+                <p>See more</p>
+
+            </div>
+
+        </div>
+
+        <div class="b4 box">
+
+            <div class="box_cont">
+
+                <h2>Shop deals in Fashion</h2>
+
+                <div class="box_img"
+                    style="background-image: url('b4.jpg');">
+                </div>
+
+                <p>See more</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CART SECTION -->
+
+    <div class="cart-box">
+
+        <h2>Your Cart</h2>
+
+        <ul id="cartItems"></ul>
+
+        <h3>Total: ₹<span id="total">0</span></h3>
+
+    </div>
+
+    <!-- SIGN IN POPUP -->
+
+    <div class="signin-popup" id="signinPopup">
+
+        <div class="popup-content">
+
+            <span class="close-btn"
+                onclick="closePopup()">&times;</span>
+
+            <h2>Sign In</h2>
+
+            <input type="text"
+                placeholder="Enter Email">
+
+            <input type="password"
+                placeholder="Enter Password">
+
+            <button>Login</button>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="foot1"></div>
+
+        <div class="foot_panel1">
+
+            <h2>See personalized recommendations</h2>
+
+            <button class="foot_button">Sign in</button>
+
+            <p>
+                New customer?
+                <a href="#">Start here.</a>
+            </p>
+
+        </div>
+
+        <div class="foot2"></div>
+
+        <div class="foot_panel2">
+            Back To Top
+        </div>
+
+        <div class="foot_panel3">
+
+            <ul>
+
+                <p>Get to Know Us</p>
+
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">About Amazon</a>
+
+            </ul>
+
+            <ul>
+
+                <p>Make Money with Us</p>
+
+                <a href="#">Sell products on Amazon</a>
+                <a href="#">Affiliate Program</a>
+
+            </ul>
+
+            <ul>
+
+                <p>Amazon Payment Products</p>
+
+                <a href="#">Amazon Pay</a>
+                <a href="#">Gift Cards</a>
+
+            </ul>
+
+            <ul>
+
+                <p>Let Us Help You</p>
+
+                <a href="#">Your Account</a>
+                <a href="#">Your Orders</a>
+
+            </ul>
+
+        </div>
+
+        <div class="foot_panel4">
+
+            <div class="foot_logo"></div>
+
+        </div>
+
+        <div class="foot_panel6">
+
+            <div class="pages">
+
+                <a>Conditions of Use</a>
+                <a>Privacy Notice</a>
+
+            </div>
+
+            <div class="copyright">
+
+                © 1996-2026 Amazon Clone
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JS -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
